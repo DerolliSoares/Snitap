@@ -4,6 +4,11 @@
     width: 100%;
     padding: 2.5rem 2rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
     & h1 {
         max-width: 40rem;
     }
@@ -31,7 +36,7 @@
 
     & h1 span {
         display: block;
-        animation: sLideUp 6s infinite ease;
+        animation: sLideUp 6s 2.5s infinite ease;
     }
 
     & .buttons {
@@ -73,6 +78,75 @@
             0 36px 15px rgb(0 0 0 / .01)
             ;
         }
+    }
+
+    & > div:nth-child(2) {
+        display: block;
+        width: 100%;
+        max-width: 30.5rem;
+        height: 30.5rem;
+
+        &.content {
+            width: 100%; 
+            position: relative;
+        }
+
+        & img {
+            position: absolute;
+            width: 100%;
+        } 
+
+        & img[src*="Ellipse"] {
+            width: 94%;
+            top: 3%;
+            left: 3%;
+
+            transform: translateX(200%);
+            animation: sLideIn 3s 200ms ease forwards;
+        }
+
+        & img[src*="patins"] {
+            z-index: 1;
+
+            transform: translateX(200%);
+            animation: sLideIn 3s ease forwards;
+        }
+
+        & img[src*="Stars 1"] {
+            max-width: 5.5rem;
+            top: 30%;
+            left: 2%;
+            z-index: 0;
+
+            opacity: 0;
+            transform: translateX(400%);
+            animation: sLideIn 2s 800ms ease forwards, appear 100ms 800ms forwards;
+        }
+
+        & img[src*="Stars 2"] {
+            max-width: 2.5rem;
+            bottom: 35%;
+            right: 0;
+
+            transform: translateX(400%);
+            animation: sLideIn 2.2s 800ms ease forwards;
+        }
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sLideIn {
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 

@@ -36,7 +36,7 @@
 
     & h1 span {
         display: block;
-        animation: sLideUp 6s 2.5s infinite ease;
+        animation: sLideUp 5s 2s infinite ease;
     }
 
     & .buttons {

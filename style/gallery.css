@@ -108,6 +108,26 @@
     }
 }
 
+@media (width < 60em) {
+    .gallery {
+        max-width: 22.5rem;
+        padding: 1.5rem;
+
+        & .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+        }
+
+        & figure {
+            & > img {
+                height: 16rem;
+            }
+        }
+    }
+}
+
 @keyframes image-appear {
     from {
         opacity: 0;

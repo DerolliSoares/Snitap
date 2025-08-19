@@ -45,3 +45,10 @@ header.top {
         justify-content: center;
     }
 }
+
+@media (width < 60em) {
+    header.top {
+        max-width: 22.5rem;
+        padding: 1.25rem 1.5rem;
+    }
+}

@@ -28,10 +28,6 @@
     --text-xl:4rem;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 html, button {
     font: 500 1rem/1.5 var(--ff-base);
 }
